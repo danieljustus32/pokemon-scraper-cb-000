@@ -21,7 +21,7 @@ class Pokemon
   end
 
   def alter_hp(value, db)
-    a = self.find(1, @db)
+    a = self.class.find(1, @db)
     binding.pry
   end
 end
