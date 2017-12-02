@@ -21,8 +21,7 @@ class Pokemon
   end
 
   def alter_hp(value, db)
-    a = self.class.find(1, db)
-    b = db.execute('SELECT * FROM pokemon WHERE id = 1;')
+    db.execute('UPDATE pokemon SET hp = ? WHERE id = ?', value, self.class.find.id)
     binding.pry
   end
 end
