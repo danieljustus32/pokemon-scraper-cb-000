@@ -20,7 +20,7 @@ class Pokemon
     self.new(id: attrs[0], name: attrs[1], type: attrs[2], db: @db)
   end
 
-  def alter_hp
+  def alter_hp(value, db)
     a = self.find(1, @db)
     binding.pry
   end
